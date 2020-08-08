@@ -1,0 +1,22 @@
+certifi==2020.6.20
+click==7.1.2
+flake8 @ file:///home/conda/feedstock_root/build_artifacts/flake8_1594584774608/work
+Flask==1.1.2
+flask-mongoengine==0.9.5
+Flask-WTF==0.14.3
+importlib-metadata @ file:///D:/bld/importlib-metadata_1593211549301/work
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+marshmallow==2.16.3
+mccabe==0.6.1
+mongoengine==0.20.0
+pycodestyle @ file:///home/conda/feedstock_root/build_artifacts/pycodestyle_1589305246696/work
+pyflakes==2.2.0
+pymongo==3.11.0
+python-dateutil==2.8.1
+six==1.15.0
+Werkzeug==1.0.1
+wincertstore==0.2
+WTForms==2.3.3
+zipp==3.1.0
