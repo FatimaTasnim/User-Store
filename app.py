@@ -48,4 +48,12 @@ def add_user():
         except:
             return {'error': "please enter parent id"}, 400
 
+@app.route('/api/users/<id>', methods=['PATCH'])
+def update_user(id):
+    try:
+        body = request.get_json()
+        User.objects.get(user_id=id).update(**body)
+        return 'Data is updated', 200
+    except:
+        return {'error': 'User ID, role & parent cannot be changed'}, 400
 app.run()
