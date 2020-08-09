@@ -48,6 +48,14 @@ def add_user():
         except:
             return {'error': "please enter parent id"}, 400
 
+@app.route('/api/users/<id>', methods=['DELETE'])
+def delete_user(id):
+    try:
+        User.objects.get(user_id=id).delete()
+        User.objects(parent=id).delete()
+        return 'User and associate childs are deleted', 200
+    except:
+        return {'error': "Could not delete user"}, 400
 @app.route('/api/users/<id>', methods=['PATCH'])
 def update_user(id):
     try:
