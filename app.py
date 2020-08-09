@@ -1,7 +1,9 @@
-from flask import Flask, request, Response
+import json
+
+from flask import Flask, Response, jsonify, request
+
 from database.db import initialize_db
 from database.models import User
-
 
 app = Flask(__name__)
 
@@ -30,7 +32,7 @@ def add_user():
         if "zip" in body:
             user["zip"] = body["zip"]
         user.save()
-        return "Your data is stored properly", 201
+        return jsonify(user), 201
     elif body["role"] == "CHILD":
         try:
             body["parent"]
@@ -40,7 +42,7 @@ def add_user():
                 User.objects.get(user_id=body["parent"])
                 user["parent"] = body["parent"]
                 user.save()
-                return "Your data stored properly", 201
+                return jsonify(user), 201
             except:
                 return {"error": "please enter a registered parent id"}, 400
         except:
