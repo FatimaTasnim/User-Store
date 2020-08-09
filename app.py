@@ -48,6 +48,7 @@ def add_user():
         except:
             return {'error': "please enter parent id"}, 400
 
+
 @app.route('/api/users/<id>', methods=['DELETE'])
 def delete_user(id):
     try:
@@ -56,6 +57,8 @@ def delete_user(id):
         return 'User and associate childs are deleted', 200
     except:
         return {'error': "Could not delete user"}, 400
+
+
 @app.route('/api/users/<id>', methods=['PATCH'])
 def update_user(id):
     try:
@@ -64,4 +67,25 @@ def update_user(id):
         return 'Data is updated', 200
     except:
         return {'error': 'User ID, role & parent cannot be changed'}, 400
+
+
+@app.route('/api/users/<id>', methods=['GET'])
+def get_user(id):
+    try:
+        users = User.objects.get(user_id=id).to_json()
+        return Response(users, mimetype="application/json", status=200)
+    except:
+        return {'error': "No user found"}, 400
+
+
+@app.route('/api/users', methods=['GET'])
+def get_all_users():
+    try:
+        users = User.objects().to_json()
+        return Response(users, mimetype="application/json", status=200)
+    except:
+        return {'error': "No user found"}, 400
+
+
 app.run()
+
