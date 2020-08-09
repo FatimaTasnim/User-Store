@@ -1,0 +1,113 @@
+{
+	"variables": [],
+	"info": {
+		"name": "UserStore",
+		"_postman_id": "67e7ab81-c8e1-d3cd-8b44-05ef0fe71a36",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Child User",
+			"request": {
+				"url": "localhost:5000/api/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"Finn\",\n\t\"last_name\" : \"lockwood\",\n\t\"role\" : \"CHILD\",\n\t\"parent\": \"9571d6f9431544c784652017c1560dab\"\n}"
+				},
+				"description": "Parameters(json object): \n\n```\nfirst_name: String, required \nlast_name = String, required \nrole = String, required [\"CHILD\"]\nparent = String\n\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Parent User",
+			"request": {
+				"url": "localhost:5000/api/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": \"9571d6f9431544c784652017c1560dab\",\n\t\"first_name\": \"Rigina\",\n\t\"last_name\": \"lockwood\",\n\t\"role\": \"PARENT\",\n\t\"state\": \"US\",\n\t\"street\": \"BroadWay\",\n\t\"city\": \"NY\",\n\t\"zip\": \"27505\"\n}"
+				},
+				"description": "Parameters(json object): \n\n```\nfirst_name: String, required \nlast_name = String, required \nrole = String, required [\"PARENT\"]\nstate = String\nstreet = String\ncity = String\nzip = String\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"url": "localhost:5000/api/users/9571d6f9431544c784652017c1560dab",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Parameters(json object): \n\ncan change delete if specifies the id at the last parameter of the api"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"url": "localhost:5000/api/users/2b00252a23a1401a9cf13f576fe52e28",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"first_name\": \"Triniti\"\n}"
+				},
+				"description": "Parameters(json object): \n\n```\nfirst_name: String\nlast_name = String, required \nstate = String\nstreet = String\ncity = String\nzip = String\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Search All User",
+			"request": {
+				"url": "localhost:5000/api/users",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Search Particular User",
+			"request": {
+				"url": "localhost:5000/api/users/2b00252a23a1401a9cf13f576fe52e28",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

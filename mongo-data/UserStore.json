@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "5f302399c2949c906cb0f7ea"
+  },
+  "user_id": "9571d6f9431544c784652017c1560dab",
+  "first_name": "Rigina",
+  "last_name": "lockwood",
+  "role": "PARENT",
+  "state": "US",
+  "street": "BroadWay",
+  "city": "NY",
+  "zip": "27505"
+},{
+  "_id": {
+    "$oid": "5f3023c5c2949c906cb0f7eb"
+  },
+  "user_id": "57cf6d8616144f13b442d3294b87f70b",
+  "first_name": "Elaiza",
+  "last_name": "lockwood",
+  "role": "PARENT",
+  "state": "US",
+  "street": "BroadWay",
+  "city": "NY",
+  "zip": "27505"
+},{
+  "_id": {
+    "$oid": "5f30242ac2949c906cb0f7ec"
+  },
+  "user_id": "38561dbf975c43eab0c04099d738e199",
+  "first_name": "Daniel",
+  "last_name": "lockwood",
+  "role": "CHILD"
+},{
+  "_id": {
+    "$oid": "5f302443c2949c906cb0f7ed"
+  },
+  "user_id": "1175f22038264da08225161718606c36",
+  "first_name": "Emma",
+  "last_name": "lockwood",
+  "role": "CHILD"
+},{
+  "_id": {
+    "$oid": "5f30245ec2949c906cb0f7ee"
+  },
+  "user_id": "8d5bb864e4eb4d1881bdd0880675e5d7",
+  "first_name": "Finn",
+  "last_name": "lockwood",
+  "role": "CHILD"
+}]
