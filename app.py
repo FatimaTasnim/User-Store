@@ -1,7 +1,7 @@
-from flask import Flask, Response, request
-
+from flask import Flask, request, Response
 from database.db import initialize_db
 from database.models import User
+
 
 app = Flask(__name__)
 
@@ -30,7 +30,7 @@ def add_user():
         if "zip" in body:
             user["zip"] = body["zip"]
         user.save()
-        return "Your data is stored properly", 200
+        return "Your data is stored properly", 201
     elif body["role"] == "CHILD":
         try:
             body["parent"]
