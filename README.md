@@ -1,3 +1,5 @@
+<img src = './docs/artwork.svg' width="300" alt="artwork" />
+
 # User Store
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![flask 1.1.2](https://img.shields.io/badge/flask-1.1.2-blue.svg)](https://pypi.org/project/Flask/)
@@ -22,6 +24,14 @@ Import postman [collections](./docs/UserStore.postman_collection.json)
 ![ImportPostman](./docs/postmanImport.PNG)
 
 Check the individual requests and its description to get more detail.
+
+## Pytest
+
+Run this command in the root folder to perform E2E test
+
+```
+pytest
+```
 
 
 
